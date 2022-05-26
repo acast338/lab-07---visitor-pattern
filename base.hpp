@@ -5,6 +5,9 @@
 
 class Base {
     public:
+        /* Constructor */
+        Base(){}
+
         virtual ~Base() = default;
 
         /* Pure Virtual Functions */
