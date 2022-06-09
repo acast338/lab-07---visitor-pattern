@@ -1,6 +1,5 @@
 #ifndef __OP_HPP__
 #define __OP_HPP__
-using namespace std;
 
 #include "base.hpp"
 #include <string>
@@ -8,12 +7,12 @@ using namespace std;
 class Op : public Base {
   private:
     double val;
-    string str;
+    std::string str;
   public:
     Op(double value) : Base() {
         this->val = value;
-        this->str = to_string(val);
-        this->str.erase(str.find_last_not_of('0')+2, string::npos);
+        this->str = std::to_string(val);
+        this->str.erase(str.find_last_not_of('0')+2, std::string::npos);
     }
 
     virtual double evaluate() {
